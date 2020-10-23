@@ -8,7 +8,7 @@ import sys
 import time
 from colorama import init, Style, Back, Fore
 
-print """
+print("""
 
  /$$$$$$$                          /$$      /$$           /$$ /$$      
 | $$__  $$                        | $$$    /$$$          |__/| $$      
@@ -19,7 +19,7 @@ print """
 | $$$$$$$/|  $$$$$$/| $$ | $$ | $$| $$ \/  | $$|  $$$$$$$| $$| $$$$$$$$
 |_______/  \______/ |__/ |__/ |__/|__/     |__/ \_______/|__/|________/
                                                                                 
-"""
+""")
 def BomEmail():
     if os.name == 'nt':
         os.system('cls')
@@ -46,7 +46,7 @@ else:
     print 'Kindly Enter Your Answer in 1 or 2 in Mail Server.'
     sys.exit()
 
-print ''
+print('')
 
 try:
     server = smtplib.SMTP(smtp_server,port)
@@ -61,11 +61,11 @@ try:
         print "\r[+]E-mails sent: %i" % i
         sys.stdout.flush()
     server.quit()
-    print '\n Done  !!!'
-    print '                                                  BomMail :~ Enjoy :)'
+    print('\n Done  !!!')
+    print (')                                                 BomMail :~ Enjoy :)'
 except KeyboardInterrupt:
-    print '[-] Canceled'
+    print('[-] Canceled')
     sys.exit()
 except smtplib.SMTPAuthenticationError:
-    print '\n[!] Allow access to less secure apps on your gmail account. https://www.google.com/settings/security/lesssecureapps'
+    print('\n[!] Allow access to less secure apps on your gmail account. https://www.google.com/settings/security/lesssecureapps')
     sys.exit()
